@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Palindromes;
 
 namespace Palindromes.Tests
 {
@@ -21,10 +20,24 @@ namespace Palindromes.Tests
     }
 
     [TestMethod]
-    public void IsPalindrome_AIntPalindrome_False()
+    public void IsPalindrome_AnIntPalindrome_False()
     {
       Palin testPalin = new Palin();
       Assert.AreEqual(false, testPalin.IsPalindrome(1231));
+    }
+
+    [TestMethod]
+    public void IsPalindrome_AStringPalindrome_True()
+    {
+      Palin testPalin = new Palin();
+      Assert.AreEqual(true, testPalin.IsPalindrome("abba"));
+    }
+
+    [TestMethod]
+    public void IsPalindrome_AnIntPalindrome_True()
+    {
+      Palin testPalin = new Palin();
+      Assert.AreEqual(true, testPalin.IsPalindrome(1221));
     }
   }
 }

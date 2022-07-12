@@ -10,14 +10,21 @@ namespace Palindromes.Tests
     public void IsPalindrome_HasSameEnds_True()
     {
       Palin testPalin = new Palin();
-      Assert.AreEqual(true, testPalin.IsPalindrome("121"));
+      Assert.AreEqual(true, testPalin.IsPalindrome("1221"));
     }
 
     [TestMethod]
-    public void IsPalindrome_APalindrome_True()
+    public void IsPalindrome_AStringPalindrome_False()
     {
       Palin testPalin = new Palin();
       Assert.AreEqual(false, testPalin.IsPalindrome("1231"));
+    }
+
+    [TestMethod]
+    public void IsPalindrome_AIntPalindrome_False()
+    {
+      Palin testPalin = new Palin();
+      Assert.AreEqual(false, testPalin.IsPalindrome(1231));
     }
   }
 }

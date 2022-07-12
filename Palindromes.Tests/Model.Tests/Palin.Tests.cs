@@ -12,5 +12,12 @@ namespace Palindromes.Tests
       Palin testPalin = new Palin();
       Assert.AreEqual(true, testPalin.IsPalindrome("121"));
     }
+
+    [TestMethod]
+    public void IsPalindrome_APalindrome_True()
+    {
+      Palin testPalin = new Palin();
+      Assert.AreEqual(false, testPalin.IsPalindrome("1231"));
+    }
   }
 }
